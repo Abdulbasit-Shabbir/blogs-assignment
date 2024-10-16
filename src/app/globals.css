@@ -1,0 +1,200 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global Styles */
+
+/* General Page Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #2c2f33; /* Light grey background */
+  color: #333; /* Dark text color */
+}
+
+.header-buttons {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start;
+  gap:100px;
+ 
+}
+
+.header-buttons li {
+  margin-right: 20px;
+}
+
+.header-buttons li a {
+  color: rgb(192, 228, 249);
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 15px;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.header-buttons li a:hover {
+  /* background-color: #c678ac; */
+  border-radius: 5px;
+}
+.header-buttons li a:active {
+  background-color: #8dc4e9;
+}
+
+/* Header and Footer */
+.header {
+  background-color: rgb(26, 23, 23); /* Teal background */
+  padding: 10px 20px;
+  border: 2px #aaebfc solid ;
+  -webkit-box-shadow: 8px 1px 27px 4px rgb(18, 26, 119);
+-moz-box-shadow: 8px 1px 27px 4px rgba(66, 68, 90, 1);
+box-shadow: 8px 1px 27px 4px rgba(66, 68, 90, 1);;
+
+}
+
+.footer {
+  background-color: #1a1717;
+  color: rgb(196, 235, 249);
+  padding: 10px 0;
+  text-align: center;
+}
+
+/* Parent container with rounded corners */
+.parent-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  padding: 20px;
+  margin: 20px;
+  background-color: #181414;
+  width: 350px;
+  border-radius: 20px; /* Rounded corners for parent container */
+  display: inline-block;
+  overflow: hidden; /* Prevent content overflow */
+  transition: transform 0.3s ease; /* Add smooth hover effect */
+
+}
+
+.parent-container:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  transition-duration: 0.5 ease;
+  box-shadow: #92dbed;
+  border: 1px solid;
+  border-color: #a4d2fb;
+}
+
+/* Child container */
+.child-container {
+  border-radius: 15px; /* Rounded corners for images */
+  overflow: hidden; /* Clip any overflow */
+  padding: 20px;
+  height: 150px;
+  max-width: 600px;
+  width: 100%;
+}
+
+/* Image styles */
+img {
+  border-radius: 15px; /* Rounded image corners */
+}
+
+/* Text alignment and content styles */
+.content {
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.9rem;
+  color: #8ec5e6; /* Coral color for headings */
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #f2eded;
+}
+
+/* Navigation Styles */
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  .parent-container {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+.read-more-button {
+  position: absolute; /* Absolute positioning to place it in the parent container */
+  bottom: 20px; /* Position it at the bottom */
+  right: 20px; /* Position it at the right */
+  background-color: #70b7db; /* Red-orange color for energy */
+  color: rgb(9, 8, 8); /* White text color */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 3px 3px; /* Padding for button size */
+  font-size: 0.9rem; /* Slightly smaller font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth hover transition */
+  z-index: 1; /* Ensures it's on top of other content */
+}
+
+.read-more-button:hover {
+  background-color: #546fe6; /* Darken red-orange on hover */
+}
+
+.read-more-button:active {
+  background-color: #275d71; /* Slightly darker when clicked */
+}
+
+/* For responsive behavior */
+@media (max-width: 600px) {
+  .read-more-button {
+    font-size: 0.8rem; /* Smaller font for mobile */
+    padding: 6px 10px; /* Adjust padding for smaller screens */
+    bottom: 10px; /* Reduce spacing for smaller screens */
+    right: 10px;
+  }
+}
+
+/* Add this to parent-container to handle positioning */
+.parent-container {
+  position: relative; /* Relative positioning to allow absolute positioning of button */
+  padding-bottom: 50px; /* Add padding at the bottom to avoid overlap with the button */
+}
+
+h2{
+  color: #70b7db;
+}
+.points li{
+   color: #0a0a0a;
+}
+.about-container{
+  padding: 30px;
+}
